@@ -10,7 +10,7 @@
           </h1>
   
           <p class="subheading font-weight-regular">
-            MoonKnight es una aplicación para registar a lectores.
+            MoonKnight es una aplicación para registrar a lectores.
           </p>
         </v-col>
         <v-col class="mb-5" cols="12">
