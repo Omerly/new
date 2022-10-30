@@ -11,8 +11,8 @@
 
 <template>
   <v-card
-    class="mt-4 mx-auto"
-    max-width="400"
+    class="mt-10 mx-auto"
+    max-width="600"
   >
     <v-sheet
       class="v-sheet--offset mx-auto"
@@ -31,7 +31,7 @@
 
     <v-card-text class="pt-0">
       <div class="text-h6 font-weight-light mb-2">
-        Registro de usuarios
+        Registro de Lectores
       </div>
       
       <v-divider class="my-2"></v-divider>
