@@ -14,12 +14,7 @@
 
                   </div>
 
-                  <div class="grafica2">
-
-
-
-
-                  </div>
+                  
 
 
 
@@ -33,8 +28,8 @@
   </v-app>
 </template>
 <style>
-.grafica,
-.grafica2 {
+.grafica
+ {
 
   max-width: 600px;
 
