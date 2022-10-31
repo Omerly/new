@@ -1,104 +1,102 @@
 <template>
-    <v-app>
+  <v-app>
       <v-row>
 
-            <v-col cols="12">
+          <v-col cols="12">
 
-                <main class="tabla-page">
-                    <H1 class="text-center">Dashboard</H1>
-                    <!--Grafica-->
+              <main class="tabla-page">
+                  <H1 class="text-center">Dashboard</H1>
+                  <!--Grafica-->
+                  <div class="grafica">
+                      <Bar :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId"
+                          :dataset-id-key="datasetIdKey" :plugins="plugins" :css-classes="cssClasses" :styles="styles"
+                          :width="width" :height="height" />
+
+                  </div>
+
+                  <div class="grafica2">
 
 
-<template>
-  <v-card
-    class="mt-10 mx-auto"
-    max-width="600"
-  >
-    <v-sheet
-      class="v-sheet--offset mx-auto"
-      color="teal"
-      elevation="12"
-      max-width="calc(100% - 32px)"
-    >
-      <v-sparkline
-        :labels="labels"
-        :value="value"
-        color="white"
-        line-width="2"
-        padding="16"
-      ></v-sparkline>
-    </v-sheet>
 
-    <v-card-text class="pt-0">
-      <div class="text-h6 font-weight-light mb-2">
-        Registro de Lectores
-      </div>
-      
-      <v-divider class="my-2"></v-divider>
-      <v-icon
-        class="mr-2"
-        small
-      >
-        mdi-clock
-      </v-icon>
-      <span class="text-caption grey--text font-weight-light">Último registro hace 26 minutos</span>
-    </v-card-text>
-  </v-card>
+
+                  </div>
+
+
+
+
+
+              </main>
+
+          </v-col>
+
+      </v-row>
+  </v-app>
 </template>
-                    
+<style>
+.grafica,
+.grafica2 {
 
-                </main>
+  max-width: 600px;
 
-            </v-col>
-
-        </v-row>
-    </v-app>
-</template>
-
-
-<Style>
-.grafica 
-{
-   height:20px;
-   width:10px;
 }
 
-
-</Style>
-    
-  
-<script>
-  export default {
-    data: () => ({
-      labels: [
-        '12am',
-        '3am',
-        '6am',
-        '9am',
-        '12pm',
-        '3pm',
-        '6pm',
-        '9pm',
-      ],
-      value: [
-        200,
-        675,
-        410,
-        390,
-        310,
-        460,
-        250,
-        240,
-      ],
-    }),
-  }
-</script>
-
-<style>
-  .v-sheet--offset {
-    top: -24px;
-    position: relative;
-  }
 </style>
+<script>
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+
+export default {
+  name: 'BarChart',
+  components: { Bar },
+  props: {
+    chartId: {
+      type: String,
+      default: 'bar-chart'
+    },
+    datasetIdKey: {
+      type: String,
+      default: 'label'
+    },
+    width: {
+      type: Number,
+      default: 400
+    },
+    height: {
+      type: Number,
+      default: 400
+    },
+    cssClasses: {
+      default: '',
+      type: String
+    },
+    styles: {
+      type: Object,
+      default: () => { }
+    },
+    plugins: {
+      type: Object,
+      default: () => { }
+    }
+  },
+  data() {
+    return {
+      chartData: {
+        labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre'],
+        datasets: [{
+          label: 'Lectores',
+          backgroundColor: '#00FFFF',
+
+
+          data: [10, 12, 30, 40, 20, 15]
+        }]
+      },
+      chartOptions: {
+        responsive: true
+      }
+    }
+  }
+}
+</script>
 
