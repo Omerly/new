@@ -1,41 +1,41 @@
 <template>
   <v-app>
-      <v-row>
+    <v-row>
 
-          <v-col cols="12">
+      <v-col cols="12">
 
-              <main class="tabla-page">
-                  <H1 class="text-center">Dashboard</H1>
-                  <!--Grafica-->
-                  <div class="grafica">
-                      <Bar :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId"
-                          :dataset-id-key="datasetIdKey" :plugins="plugins" :css-classes="cssClasses" :styles="styles"
-                          :width="width" :height="height" />
+        <main class="tabla-page">
+          <H1 class="text-center">Dashboard</H1>
+          <!--Grafica-->
 
-                  </div>
+          <v-card max-width="400" elevation="2" outlined>
 
-                  
+            <div >
+            <Bar :chart-options="chartOptions" :chart-data="chartData" :chart-id="chartId"
+              :dataset-id-key="datasetIdKey" :plugins="plugins" :css-classes="cssClasses" :styles="styles"
+              :width="width" :height="height" />
 
-
-
+          </div>
 
 
-              </main>
 
-          </v-col>
+          </v-card>
+        
 
-      </v-row>
+
+
+
+
+
+
+        </main>
+
+      </v-col>
+
+    </v-row>
   </v-app>
 </template>
-<style>
-.grafica
- {
 
-  max-width: 600px;
-
-}
-
-</style>
 <script>
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
@@ -78,13 +78,13 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre'],
+        labels: ['Enero','Febrero','Marzo','Abril','Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre','Noviembre','Diciembre',],
         datasets: [{
           label: 'Lectores',
           backgroundColor: '#00FFFF',
 
 
-          data: [10, 12, 30, 40, 20, 15]
+          data: [4,16,25,14,10, 12, 30, 40, 20, 15,35,16]
         }]
       },
       chartOptions: {
