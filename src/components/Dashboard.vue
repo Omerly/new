@@ -67,7 +67,7 @@
             </v-row>
           </v-container>
 
-          <!--Grafica-->
+        
         </main>
       </v-col>
     </v-row>
