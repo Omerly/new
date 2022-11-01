@@ -24,18 +24,18 @@
 
           <v-container>
             <v-row>
-              <v-col cols="3">
-                <v-card max-width="400" elevation="2" outlined>
+              <v-col cols="3" >
+                <v-card width="400" height="200" elevation="2" outlined>
                   <h1>Hola</h1>
                 </v-card>   
               </v-col>
               <v-col cols="3">
-                <v-card max-width="400" elevation="2" outlined>
+                <v-card width="400" height="200" elevation="2" outlined>
                   <h1>Hola</h1>
                 </v-card>   
               </v-col>
               <v-col cols="3">
-                <v-card max-width="400" elevation="2" outlined>
+                <v-card width="400" height="200" elevation="2" outlined>
                   <h1>Hola</h1>
                 </v-card>   
               </v-col>
