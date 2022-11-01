@@ -8,7 +8,7 @@
           <v-container>
             <v-row >
               <v-col cols="5" class="ml-15">
-                <v-card width="400" height="200" elevation="2" outlined>
+                <v-card width="500" height="250" elevation="2" outlined>
                   <v-progress-circular
                     rotate="360"
                     size="150"
@@ -23,7 +23,7 @@
               </v-col>
               <v-col cols="5" class="ml-15">
                 <div >
-                  <v-card max-width="500" elevation="2" outlined>
+                  <v-card width="500" height="250" elevation="2" outlined>
                     <Bar
                       :chart-options="chartOptions"
                       :chart-data="chartData"
