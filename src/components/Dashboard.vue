@@ -4,43 +4,80 @@
       <v-col cols="12">
         <main class="tabla-page">
           <H1 class="text-center">Dashboard</H1>
-          <!--Grafica-->
 
-          <v-card max-width="400" elevation="2" outlined>
-            <div>
-              <Bar
-                :chart-options="chartOptions"
-                :chart-data="chartData"
-                :chart-id="chartId"
-                :dataset-id-key="datasetIdKey"
-                :plugins="plugins"
-                :css-classes="cssClasses"
-                :styles="styles"
-                :width="width"
-                :height="height"
-              />
-            </div>
-          </v-card>
-
-          <v-container>
-            <v-row>
-              <v-col cols="3" >
+          
+          <v-container  >
+            <v-row align="center" justify="center" >
+              <v-col cols="3" class="ml-15">
                 <v-card width="400" height="200" elevation="2" outlined>
-                  <h1>Hola</h1>
-                </v-card>   
+                  <v-progress-circular
+                    rotate="360"
+                    size="150"
+                    width="15"
+                    value="50"
+                    color="teal"
+                    class="mt-2 ml-13 mb-2"
+                  >
+                  50%
+                  </v-progress-circular>
+                </v-card>
+                
               </v-col>
-              <v-col cols="3">
-                <v-card width="400" height="200" elevation="2" outlined>
-                  <h1>Hola</h1>
-                </v-card>   
+              <v-col cols="3" class="ml-15">
+                  <v-card width="400" height="200" elevation="2" outlined>
+                  <v-progress-circular
+                    rotate="360"
+                    size="100"
+                    width="15"
+                    value="50"
+                    color="teal"
+                    class="mt-2 ml-7 mb-2"
+                  >
+                  50%
+                  </v-progress-circular>
+                </v-card>
               </v-col>
-              <v-col cols="3">
-                <v-card width="400" height="200" elevation="2" outlined>
-                  <h1>Hola</h1>
-                </v-card>   
+              <v-col cols="3" class="ml-15">
+                <v-card width="500" height="200" elevation="2" outlined>
+                  <v-progress-circular
+                    rotate="360"
+                    size="100"
+                    width="15"
+                    value="50"
+                    color="teal"
+                    class="mt-2 ml-7 mb-2"
+                  >
+                  50%
+                  </v-progress-circular>
+               
+                </v-card>
               </v-col>
             </v-row>
           </v-container>
+
+          
+
+          <!--Grafica-->
+<div align="left">
+  <v-card max-width="400" elevation="2" outlined  >
+           
+           <Bar
+             :chart-options="chartOptions"
+             :chart-data="chartData"
+             :chart-id="chartId"
+             :dataset-id-key="datasetIdKey"
+             :plugins="plugins"
+             :css-classes="cssClasses"
+             :styles="styles"
+             :width="width"
+             :height="height"
+             
+           />
+        
+       </v-card>
+
+</div>
+          
         </main>
       </v-col>
     </v-row>
@@ -134,4 +171,3 @@ export default {
   },
 };
 </script>
-
