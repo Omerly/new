@@ -5,10 +5,36 @@
         <main class="tabla-page">
           <H1 class="text-center">Dashboard</H1>
 
+
           <v-container>
-            <v-row >
-              <v-col cols="5" class="ml-15">
-                <v-card width="500" height="250" elevation="2" outlined>
+
+            <v-row align="center" justify="center">
+
+              <v-col cols="4" >
+                <v-card width="500" height="200" elevation="2" outlined>
+             
+                </v-card>
+                
+              </v-col>
+              <v-col cols="4" >
+                <v-card width="500" height="200" elevation="2" outlined>
+             
+                </v-card>
+                
+              </v-col>
+              <v-col cols="4" >
+                <v-card width="500" height="200" elevation="2" outlined>
+             
+                </v-card>
+                
+              </v-col>
+            </v-row>
+          </v-container>
+          <v-container>
+            <v-row align="center" justify="center">
+              
+              <v-col cols="6" >
+                <v-card width="600" height="300" elevation="2" outlined>
                   <v-progress-circular
                     rotate="360"
                     size="150"
@@ -21,9 +47,9 @@
                   </v-progress-circular>
                 </v-card>
               </v-col>
-              <v-col cols="5" class="ml-15">
+              <v-col cols="6" >
                 <div >
-                  <v-card width="500" height="250" elevation="2" outlined>
+                  <v-card width="600" height="300" elevation="2" outlined>
                     <Bar
                       :chart-options="chartOptions"
                       :chart-data="chartData"
