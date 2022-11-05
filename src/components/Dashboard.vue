@@ -19,8 +19,8 @@
                   <v-spacer></v-spacer>
                   <!--BARRA DE HORARIO-->
                   <v-chip class="ma-2">
-                    <v-icon left color="teal">mdi-clock-time-nine</v-icon>
-                    Sabado 4, Noviembre 18:30 PM
+                    
+                    Sabado 5, Noviembre 18:30 PM
                   </v-chip>
                 </v-app-bar>
               </v-col>
