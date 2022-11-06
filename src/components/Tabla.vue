@@ -55,21 +55,7 @@
             </v-dialog>
         </v-toolbar>
         </template>
-        <template v-slot:item.action="{}">
-            <v-icon
-            small
-            class="mr-2"
-            @click=""
-            >
-            create
-            </v-icon>
-                <v-icon
-                small
-                @click=""
-                >
-                delete
-                </v-icon>
-        </template>
+        
         <template v-slot:no-data>
         <v-btn color="primary" @click="initialize">Reset</v-btn>
         </template>
@@ -86,7 +72,7 @@
                 { text: 'Apellido', value: 'apellido' },
                 { text: 'Libros Leídos', value: 'leidos' },
                 { text: 'Libros por leer', value: 'porleer' },
-                { text: 'Acciones', value: 'action', sortable: false },
+                
             ],
             lectores: [],
             search: '',
